@@ -472,7 +472,9 @@
 							</div>
 
 							<p class="project-description">
-								Este sistema ha reducido significativamente los tiempos de espera y mejorado la eficiencia en puntos clave como aeropuertos y fronteras, permitiendo a los viajeros completar el trámite de manera digital desde cualquier dispositivo.
+								Este sistema ha reducido significativamente los tiempos de espera y mejorado la eficiencia en puntos
+								clave como aeropuertos y fronteras, permitiendo a los viajeros completar el trámite de manera digital
+								desde cualquier dispositivo.
 							</p>
 
 							<div class="stats-features-container">
@@ -535,7 +537,7 @@
 									<p>Verificaciones Diarias</p>
 								</div>
 
-								
+
 							</div>
 
 							<div>
@@ -571,7 +573,7 @@
 							<div>
 								<h2 class="project-title">Alerta Ciudadana</h2>
 								<div>
-									
+
 									<span class="badge badge-integration">Integración Continua</span>
 								</div>
 							</div>
@@ -622,6 +624,7 @@
 		<div class="navigation">
 			<button class="nav-button" onclick="previousSlide()">←</button>
 			<button class="nav-button" onclick="nextSlide()">→</button>
+			<button class="nav-button" onclick="toggleFullscreen()">⛶</button>
 		</div>
 
 		<footer class="footer">
@@ -653,6 +656,14 @@
 					slide.style.opacity = '0.7';
 				}
 			});
+		}
+
+		function toggleFullscreen() {
+			if (!document.fullscreenElement) {
+				document.documentElement.requestFullscreen();
+			} else {
+				document.exitFullscreen();
+			}
 		}
 
 		function nextSlide() {
